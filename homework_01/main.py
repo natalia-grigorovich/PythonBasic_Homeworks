@@ -32,3 +32,6 @@ def filter_numbers(numbers, filter_type):
     """
     if filter_type == ODD:
         return list(filter(lambda num: num % 2 != 0, numbers))
+
+    if filter_type == EVEN:
+        return list(filter(lambda num: num % 2 == 0, numbers))
