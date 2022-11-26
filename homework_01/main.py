@@ -13,6 +13,20 @@ def power_numbers(*numbers):
     """
     return [number ** 2 for number in numbers]
 
+
+def is_prime(num):
+    simple_num = []
+    for i in num:
+        if i > 1:
+            for d in range(2, i//2+1):
+                if i % d == 0:
+                    break
+            else:
+                if i not in simple_num:
+                    simple_num.append(i)
+    return simple_num
+
+
 # filter types
 ODD = "odd"
 EVEN = "even"
@@ -35,3 +49,6 @@ def filter_numbers(numbers, filter_type):
 
     if filter_type == EVEN:
         return list(filter(lambda num: num % 2 == 0, numbers))
+
+    if filter_type == PRIME:
+        return is_prime(numbers)
