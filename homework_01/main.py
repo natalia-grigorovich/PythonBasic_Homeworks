@@ -15,17 +15,24 @@ def power_numbers(*numbers):
 
 
 def is_prime(num):
-    simple_num = []
-    for i in num:
-        if i > 1:
-            for d in range(2, i//2+1):
-                if i % d == 0:
+    """
+        simple_num = []
+        for i in num:
+            if i > 1:
+                for d in range(2, i//2+1):
+                    if i % d == 0:
+                        break
+                else:
+                    if i not in simple_num:
+                        simple_num.append(i)
+        return simple_num
+    """
+    if num > 1:
+        for d in range(2, num//2+1):
+                if num % d == 0:
                     break
-            else:
-                if i not in simple_num:
-                    simple_num.append(i)
-    return simple_num
-
+        else:
+            return num
 
 # filter types
 ODD = "odd"
@@ -51,4 +58,5 @@ def filter_numbers(numbers, filter_type):
         return list(filter(lambda num: num % 2 == 0, numbers))
 
     if filter_type == PRIME:
-        return is_prime(numbers)
+        #return is_prime(numbers)
+        return list(filter(is_prime, numbers))
