@@ -3,7 +3,7 @@ from homework_02.exceptions import LowFuelError, NotEnoughFuel
 
 
 class Vehicle(ABC):
-    started = bool()
+    started: bool = False
     weight = None
     fuel = None
     fuel_consumption = None
