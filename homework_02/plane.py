@@ -24,7 +24,6 @@ class Plane(Vehicle):
             raise CargoOverload
 
     def remove_all_cargo(self):
-        if self.cargo > 0:
-            old_cargo = self.cargo
-            self.cargo = 0
-            return old_cargo
+        old_cargo = self.cargo
+        self.cargo = 0
+        return old_cargo
