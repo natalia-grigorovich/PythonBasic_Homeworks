@@ -8,6 +8,6 @@ from homework_02.engine import Engine
 class Car(Vehicle):
     engine = None
 
-    def set_engine(volume, pistons):
-        temp_engine = Engine(volume=volume, pistons=pistons)
-        return temp_engine
+    def set_engine(self, engine):
+        self.engine = engine
+        return self.engine
