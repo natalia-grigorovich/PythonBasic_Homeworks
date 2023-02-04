@@ -9,7 +9,7 @@ WORKDIR /app
 
 RUN pip install --upgrade pip
 
-COPY requirements.txt .
+COPY homework_03/requirements.txt .
 
 RUN pip install -r requirements.txt
 
