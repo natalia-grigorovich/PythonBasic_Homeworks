@@ -9,11 +9,11 @@ WORKDIR /app
 
 RUN pip install --upgrade pip
 
-COPY homework_03/requirements.txt .
+COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY homework_03 .
+COPY . .
 
 EXPOSE 8000
 
