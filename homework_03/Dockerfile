@@ -1,7 +1,7 @@
 # Команда для запуска:
-# docker run -it -p 8000:8000 app
+# docker run -p 8000:8000 -it app
 
-FROM python:3.9-buster
+FROM python:3.11.3-bullseye
 
 ENV PYTHONUNBUFFERED=1
 
@@ -15,6 +15,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8000
+CMD uvicorn main:app --host 0.0.0.0 --port 8000
 
-CMD uvicorn main:app --host 0.0.0.0
+EXPOSE 8000

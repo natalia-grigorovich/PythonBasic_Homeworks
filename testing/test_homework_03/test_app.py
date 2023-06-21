@@ -42,7 +42,7 @@ def build_image(docker_client):
     print("Building in", build_path)
     image_object, build_logs = docker_client.images.build(
         path=build_path,
-        # dockerfile=str(dockerfile_path),
+        # Dockerfile=str(dockerfile_path),
         # tag=image_name,
     )
     yield image_object

@@ -34,6 +34,7 @@ def is_prime(num):
         else:
             return num
 
+
 # filter types
 ODD = "odd"
 EVEN = "even"
@@ -58,5 +59,5 @@ def filter_numbers(numbers, filter_type):
         return list(filter(lambda num: num % 2 == 0, numbers))
 
     if filter_type == PRIME:
-        #return is_prime(numbers)
+        # return is_prime(numbers)
         return list(filter(is_prime, numbers))
